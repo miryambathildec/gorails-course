@@ -34,3 +34,8 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 .DS_Store
+.idea/.gitignore
+.idea/misc.xml
+.idea/modules.xml
+.idea/scheduled_tweets.iml
+.idea/vcs.xml
