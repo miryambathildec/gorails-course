@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get 'about-us', to: 'about#index', as: 'about'
 
+  get 'passwords', to: 'passwords#edit', as: :edit_password
+  patch 'passwords', to: 'passwords#update'
+
   get 'sign_up', to: 'registrations#new'
   post 'sign_up', to: 'registrations#create'
 
