@@ -1,6 +1,6 @@
-<h1>Sign up</h1>
+<h1>Reset your password</h1>
 
-<%= form_with model: @user, url: sign_up_path do |form| %>
+<%= form_with model: @user, url: password_reset_edit_path(token: params[:token]) do |form| %>
 
   <% if form.object.errors.any? %>
     <div class="alert alert-danger">
@@ -11,10 +11,6 @@
   <% end %>
 
   <div class="mb-3">
-    <%= form.label :email %>
-    <%= form.text_field :email, placeholder: 'email@apple.com', class: 'form-control' %>
-  </div>
-  <div class="mb-3">
     <%= form.label :password %>
     <%= form.password_field :password, placeholder: 'Password', class: 'form-control' %>
   </div>
@@ -23,7 +19,6 @@
     <%= form.password_field :password_confirmation, placeholder: 'Password confirmation', class: 'form-control' %>
   </div>
   <div class="mb-3">
-    <%= form.submit 'Sign up', class: 'btn btn-primary' %>
+    <%= form.submit 'Reset password', class: 'btn btn-primary' %>
   </div>
 <% end %>
-
